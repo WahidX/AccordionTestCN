@@ -1,0 +1,57 @@
+input {
+    display: none;
+}
+
+
+label {
+    display: block;    
+    cursor: pointer;
+    background: cyan;
+    color: black;
+    padding:1px;
+}
+
+
+
+label::after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f054';
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    
+}
+
+input:checked + label::after {
+    transform: rotate(90deg);
+}
+
+
+
+
+label:hover {
+    background: blue;
+}
+
+
+.content {
+    background: grey;
+    color: black;
+    padding: 2px;
+}
+
+input + label + .content {
+    display: none;
+}
+
+input:checked + label + .content {
+    display: block;
+}
+
+input:checked + label + i {
+    transform: rotate(90deg);
+}
+
+.radios input[type="radio"]:checked + .content {
+  display: block;
+}
